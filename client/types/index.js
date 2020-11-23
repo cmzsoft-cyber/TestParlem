@@ -1,0 +1,6 @@
+export const USER_AUTH = 'USER_AUTH'
+export const CREATE_USER_SUCCESS = 'CREATE_USER_SUCCESS'
+export const CREATE_USER_ERROR = 'CREATE_USER_ERROR'
+export const CLEAN_ALERT = 'CLEAN_ALERT'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_ERROR = 'LOGIN_ERROR'

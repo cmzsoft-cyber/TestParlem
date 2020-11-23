@@ -1,0 +1,29 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "constants.scss";
+@import "header.scss";
+@import "buttons.scss";
+@import "footer.scss";
+
+.main-container{
+  @media #{$mdlg}{
+    margin-top: 5rem;          
+  }
+}
+  

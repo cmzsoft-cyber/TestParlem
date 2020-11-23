@@ -1,0 +1,12 @@
+.header-buttons{
+    @media #{$xs}{
+        margin-top: 2rem;  
+        text-align: center;     
+    }
+}
+
+.h1link{
+    &:hover{
+        cursor: pointer;
+    }
+}

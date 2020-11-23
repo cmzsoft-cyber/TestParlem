@@ -1,0 +1,10 @@
+.container-footer{    
+    color: #000;    
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+
+    @media #{$xs}{
+        margin-top: 2rem;  
+    }
+}
