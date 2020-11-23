@@ -1,0 +1,8 @@
+/server/node_modules
+
+/client/node_modules
+/client/build
+/client/.DS_Store
+/client/*.pem
+/client/.next/
+/client/out/
