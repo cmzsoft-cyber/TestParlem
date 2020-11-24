@@ -1,5 +1,12 @@
 # Test Parlem
 
+## Clonar el repositori a la màquina local
+
+_Entrar desde consola i escriure el següent_
+```
+git clone 
+```
+
 
 ## Install Server ⚙️
 
