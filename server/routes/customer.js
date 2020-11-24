@@ -25,5 +25,11 @@ router.get('/',
     customerController.getCustomers
 )
 
+// GET Customer Info By id
+router.get('/:id', 
+    auth,
+    customerController.getCustomerInfo
+)
+
 
 module.exports = router;

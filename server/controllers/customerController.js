@@ -45,3 +45,16 @@ exports.getCustomers = async (req, res) => {
     }
 
 }
+
+exports.getCustomerInfo = async (req, res) => {
+    // Get customer info by id
+    try {
+        
+        let customer = await Customer.findOne({ customerId: req.params.id })
+        res.json({customer})
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Error getCustomerInfo');
+    }
+}
