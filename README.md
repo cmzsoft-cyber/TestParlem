@@ -31,5 +31,5 @@ http://localhost:3000
 
 ## Autor ✒️
 
-* **Carles Martínez** - *Analista Programador Web* - [Linkedin](https://www.linkedin.com/in/carles-martinez/)
+* **Carles Martínez** - *Analista Programador Web* - [LinkedIn](https://www.linkedin.com/in/carles-martinez/)
 
