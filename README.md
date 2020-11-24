@@ -1,10 +1,11 @@
 # Test Parlem
 
-## Clonar el repositori a la màquina local
+## Clonar el repositori a la màquina local 🔧
 
 _Entrar desde consola i escriure el següent_
+
 ```
-git clone 
+git clone https://github.com/cmzsoft-cyber/TestParlem.git
 ```
 
 
