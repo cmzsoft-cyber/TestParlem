@@ -1,13 +1,13 @@
-import { GET_CUSTOMERS, GET_CUSTOMERS_ERROR } from '../../types/index'
+import { GET_PRODUCTSCUSTOMER, GET_PRODUCTSCUSTOMER_ERROR  } from '../../types/index'
 
 export default (state, action) => {
     switch(action.type){
-        case GET_CUSTOMERS:
+        case GET_PRODUCTSCUSTOMER:
             return{
                 ...state,
-                customers: action.payload
+                products: action.payload
             }
-        case GET_CUSTOMERS_ERROR:
+        case GET_PRODUCTSCUSTOMER_ERROR:
             return{
                 ...state,
                 msg: action.payload

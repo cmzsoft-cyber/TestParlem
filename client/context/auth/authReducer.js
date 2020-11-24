@@ -39,7 +39,7 @@ export default(state, action) =>  {
                 auth: true
             }
         case CLOSE_SESSION:
-            localStorage.removeItem('token');
+            localStorage.removeItem('token');           
             return{
                 ...state,
                 user: null, 

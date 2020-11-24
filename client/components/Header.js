@@ -7,9 +7,9 @@ const Header = () => {
 
     // Define context
     const AuthContext = useContext(authContext)
-    const { user, authUser, closeSession } = AuthContext
+    const { user, auth, authUser, closeSession } = AuthContext
     
-    useEffect(() => {        
+    useEffect(() => {   
         authUser()
     }, []);  
 
@@ -19,11 +19,9 @@ const Header = () => {
                 <h1 className="h1link text-4xl px-4 tracking-tight font-extrabold text-gray-900 text-center">Test Técnic Parlem </h1>
             </Link>
             
-            <div className="header-buttons">
+            <div className="header-buttons">             
 
-             
-
-                { user ? (
+                { user && auth ? (
                     <>
                         <p>Hola - { user.name } </p>
                         <button 
