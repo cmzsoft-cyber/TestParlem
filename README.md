@@ -36,6 +36,7 @@ http://localhost:3000
 * Tailwind
 * Sass
 * Nodejs
+* Express
 * Mongo DB Atlas
 
 
