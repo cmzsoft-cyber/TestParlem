@@ -29,3 +29,7 @@ Obrir el **navegador** amb la següent url
 http://localhost:3000
 ```
 
+## Autor ✒️
+
+* **Carles Martínez** - *Analista Programador Web* - [Linkedin](https://www.linkedin.com/in/carles-martinez/)
+
