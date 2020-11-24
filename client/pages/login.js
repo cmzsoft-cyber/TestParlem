@@ -15,10 +15,10 @@ const Login = () => {
   // Next router
   const router = useRouter()
 
-  useEffect(() => {
+  useEffect(() => {    
     if(auth){
-      router.push('/')
-    }
+      router.push('/customers')
+    }      
   }, [auth])
   
 

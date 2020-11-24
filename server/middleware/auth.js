@@ -10,14 +10,17 @@ module.exports = (req, res, next) => {
         // Get Token
         const token = authHeader.split(' ')[1];
 
-        // check JWT
-        try {
-            const user = jwt.verify(token, process.env.SECRET)
-            req.user = user;
-        } catch (error) {
-            console.log(error)
-            console.log("JWT no vàlid")
+        if(token) {
+            // check JWT
+            try {
+                const user = jwt.verify(token, process.env.SECRET)
+                req.user = user;
+            } catch (error) {
+                console.log(error)
+                console.log("JWT no vàlid")
+            }
         }
+        
     } 
     return next();
 }

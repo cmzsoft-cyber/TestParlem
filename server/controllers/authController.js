@@ -16,7 +16,7 @@ exports.autenticateUser = async (req, res, next) => {
 
      // Find User if registered
      const { email, password } = req.body;
-     const user = await User.findOne({email});
+     const user = await User.findOne({email});    
      
      if(!user){
          res.status(401).json({msg: 'Aquest usuari no existeix'});
@@ -30,7 +30,8 @@ exports.autenticateUser = async (req, res, next) => {
         // User and password is correct then Creat JWT...
         const token = jwt.sign({
             id: user._id,
-            name: user.name
+            name: user.name,
+            email: user.email
         }, process.env.SECRET, {
             expiresIn: '8h'
         });
@@ -40,7 +41,10 @@ exports.autenticateUser = async (req, res, next) => {
     }else{
         res.status(401).json({msg: 'Password incorrecte'});
         return next();
-    }
-    
+    }   
 
+}
+
+exports.userAuth = (req, res, next) => {   
+    res.json({user: req.user } );
 }

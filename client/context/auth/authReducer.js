@@ -5,6 +5,8 @@ import {
     CLEAN_ALERT,
     LOGIN_SUCCESS,
     LOGIN_ERROR,   
+    USER_AUTH,
+    CLOSE_SESSION
 } from '../../types'
 
 export default(state, action) =>  {
@@ -18,6 +20,8 @@ export default(state, action) =>  {
             }
         case LOGIN_SUCCESS:
             localStorage.setItem('token', action.payload)
+            console.log("LOGIN SUCCES REDUCER")
+            console.log(action.payload)
             return{
                 ...state,
                 token: action.payload,
@@ -27,6 +31,20 @@ export default(state, action) =>  {
             return{
                 ...state,
                 msg: null
+            }
+        case USER_AUTH:
+            return{
+                ...state,
+                user: action.payload,
+                auth: true
+            }
+        case CLOSE_SESSION:
+            localStorage.removeItem('token');
+            return{
+                ...state,
+                user: null, 
+                token: null,
+                auth: null,
             }
         default: 
             return state
