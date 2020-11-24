@@ -29,6 +29,16 @@ Obrir el **navegador** amb la següent url
 http://localhost:3000
 ```
 
+### Tecnologies utilizades 📋
+* Nextjs
+* React
+* ES6
+* Tailwind
+* Sass
+* Nodejs
+* Mongo DB Atlas
+
+
 ## Autor ✒️
 
 * **Carles Martínez** - *Analista Programador Web* - [LinkedIn](https://www.linkedin.com/in/carles-martinez/)
