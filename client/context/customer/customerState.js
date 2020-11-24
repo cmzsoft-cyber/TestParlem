@@ -1,7 +1,12 @@
 import React, { useReducer } from 'react'
 import customerContext from './customerContext'
 import customerReducer from './customerReducer'
-import { GET_CUSTOMERS, GET_CUSTOMERS_ERROR } from '../../types/index'
+import { 
+    GET_CUSTOMERS, 
+    GET_CUSTOMERS_ERROR,
+    GET_CUSTOMERINFO,
+    GET_CUSTOMERINFO_ERROR
+} from '../../types/index'
 
 import clientAxios from '../../config/axios'
 
@@ -9,6 +14,7 @@ const CustomerState = ({children}) => {
 
     const initialState = {
         customers: [],
+        customer: null,
         msg: null
     }
 
@@ -33,12 +39,32 @@ const CustomerState = ({children}) => {
         }
     }
 
+    const getCustomerInfo = async (id) => {
+        try {
+
+            const res = await clientAxios.get(`/api/customer/${id}`)          
+
+            dispatch({
+                type: GET_CUSTOMERINFO,
+                payload: res.data.customer
+            })
+
+        } catch (error) {
+            dispatch({
+                type: GET_CUSTOMERINFO_ERROR,
+                payload: error.response.data.msg
+            })
+        }
+    }
+
     return(
         <customerContext.Provider
             value={{
                 customers: state.customers,
+                customer: state.customer,
                 msg: state.msg,
-                getCustomers
+                getCustomers,
+                getCustomerInfo
             }}
         >
             {children}

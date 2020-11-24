@@ -19,9 +19,7 @@ export default(state, action) =>  {
                 msg: action.payload
             }
         case LOGIN_SUCCESS:
-            localStorage.setItem('token', action.payload)
-            console.log("LOGIN SUCCES REDUCER")
-            console.log(action.payload)
+            localStorage.setItem('token', action.payload)            
             return{
                 ...state,
                 token: action.payload,
@@ -39,7 +37,7 @@ export default(state, action) =>  {
                 auth: true
             }
         case CLOSE_SESSION:
-            localStorage.removeItem('token');           
+            localStorage.removeItem('token');               
             return{
                 ...state,
                 user: null, 

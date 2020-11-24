@@ -2,8 +2,10 @@ import React, { useEffect, useContext, useState } from 'react'
 import { useRouter } from 'next/router'
 import productContext from '../../context/product/productContext'
 import authContext from '../../context/auth/authContext'
+import customerContext from '../../context/customer/customerContext'
 import Layout from '../../components/Layout'
 import Product from '../../components/Product'
+import CustomerInfo from '../../components/CustomerInfo'
 import Error404 from '../../components/404'
 
 const Profile = () => {
@@ -15,16 +17,23 @@ const Profile = () => {
     const ProductContext = useContext(productContext)
     const { products, msg, getProductsByCustomerId} = ProductContext 
 
+    const CustomerContext = useContext(customerContext)
+    const { customer, getCustomerInfo } = CustomerContext
+
     // Routing customerId
     const router = useRouter();
     const { query: { id }} = router;
     
     useEffect(() => {
         if(id){
-            const _getProductsByCustomerId = async () =>{
+            const _getProductsByCustomerId = async () => {
                 getProductsByCustomerId(id)              
             }
+            const _getCustomerInfo = async () => {
+                getCustomerInfo(id)
+            }
             _getProductsByCustomerId()
+            _getCustomerInfo()
         }
     }, [id])  
 
@@ -34,9 +43,30 @@ const Profile = () => {
             
             { !user || !auth ? <Error404 /> : (
                 
-                // CUSTOMER INFO
+            <>
 
-                // PRODUCTS CARD
+                {/* CUSTOMER INFO */}
+
+                <div className="px-4">
+
+                    { customer ? (
+                        <div>
+                            <p className="text-2xl text-red-500 text-center mb-5">Informació del client</p>
+                            <div className="container my-12 mx-auto">                            
+                                <CustomerInfo 
+                                    customer={customer}
+                                />
+                            </div>
+                        </div>
+                        ) : (
+                            <p className="text-2xl text-red-500 text-center mb-5">Aquest client no té informació</p>
+                        )
+                    }
+
+                </div>
+
+
+                {/* PRODUCTS CARD */ }
 
                 <div className="px-4">
                         
@@ -65,6 +95,7 @@ const Profile = () => {
                                 
 
                 </div>
+            </>
             )
 
         }

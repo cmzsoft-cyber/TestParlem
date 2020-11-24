@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import Link from 'next/link'
 import authContext from '../context/auth/authContext'
-import { useRouter } from 'next/router';
 
 const Header = () => {  
 
@@ -9,8 +8,11 @@ const Header = () => {
     const AuthContext = useContext(authContext)
     const { user, auth, authUser, closeSession } = AuthContext
     
-    useEffect(() => {   
-        authUser()
+    useEffect(() => {  
+        const token = localStorage.getItem('token'); 
+        if(token){
+            authUser()
+        }
     }, []);  
 
     return ( 
@@ -19,17 +21,21 @@ const Header = () => {
                 <h1 className="h1link text-4xl px-4 tracking-tight font-extrabold text-gray-900 text-center">Test Técnic Parlem </h1>
             </Link>
             
-            <div className="header-buttons">             
+            <div className="header-buttons mt-4">             
 
                 { user && auth ? (
-                    <>
-                        <p>Hola - { user.name } </p>
+                    <>  
+                        <Link href="/customers">
+                            <a className="bg-black px-5 py-3 rounded-lg text-white font-bold uppercase mr-2">Clients</a>
+                        </Link>
                         <button 
                             className="bg-red-500 px-5 py-3 rounded-lg text-white font-bold uppercase mr-2"
-                            onClick={() => closeSession()}
+                            onClick={ () => closeSession() }
                         >
                             Tancar sesió                        
                         </button>
+                        <p className="mt-5 mr-2 text-right">Hola - { user.name } </p>
+                        
                     </>
                 ) : (
                     <>
