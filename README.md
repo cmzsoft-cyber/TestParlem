@@ -1,6 +1,6 @@
 # Test Parlem
 
-## Clonar el repositori a la màquina local 🔧
+## Clonar el repositori a la màquina local 📖
 
 _Entrar desde consola i escriure el següent_
 
@@ -33,8 +33,15 @@ npm run dev
 ```
 
 Obrir el **navegador** amb la següent url
+
 ```
 http://localhost:3000
+```
+
+Pots **importar la colecció al postman** per poder veure exemples de requests a la API. La colecció esta a l'arrel del repo i es la següent
+
+```
+ParlemTest.postman_collection
 ```
 
 ### Tecnologies utilitzades 📋
