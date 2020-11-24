@@ -38,7 +38,8 @@ Obrir el **navegador** amb la següent url
 http://localhost:3000
 ```
 
-Pots **importar la colecció al postman** per poder veure exemples de requests a la API. La colecció esta a l'arrel del repo i es la següent
+Pots **importar la colecció al postman** per poder veure exemples de requests a la API i si vols pots insertar nous registres. 
+La colecció esta a l'arrel del repo i es la següent
 
 ```
 ParlemTest.postman_collection
