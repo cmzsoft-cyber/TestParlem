@@ -29,7 +29,7 @@ Obrir el **navegador** amb la següent url
 http://localhost:3000
 ```
 
-### Tecnologies utilizades 📋
+### Tecnologies utilitzades 📋
 * Nextjs
 * React
 * ES6
