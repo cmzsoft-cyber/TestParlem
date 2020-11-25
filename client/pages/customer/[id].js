@@ -41,7 +41,7 @@ const Profile = () => {
 
         <Layout>
             
-            { !user || !auth ? <Error404 /> : (
+            { !user || !auth || !customer ? <Error404 /> : (
                 
             <>
 
