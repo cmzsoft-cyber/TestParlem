@@ -10,3 +10,9 @@
         cursor: pointer;
     }
 }
+
+.salute{
+    @media #{$xssm}{
+        margin-right: 4rem; 
+    }
+}

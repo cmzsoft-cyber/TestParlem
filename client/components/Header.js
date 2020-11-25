@@ -34,7 +34,7 @@ const Header = () => {
                         >
                             Tancar sesió                        
                         </button>
-                        <p className="mt-5 mr-2 text-right">Hola - { user.name } </p>
+                        <p className="mt-5 mr-2 text-right salute">Hola - { user.name } </p>
                         
                     </>
                 ) : (

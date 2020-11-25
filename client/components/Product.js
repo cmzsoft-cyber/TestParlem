@@ -1,8 +1,11 @@
 import React from 'react';
+import moment from 'moment'
 
 const Product = ({product}) => {
 
     const { customerId, productName, productTypeName, numeracioTerminal, soldAt } = product
+
+    const s_Date = moment(soldAt).format('DD/MM/YYYY');
 
     return ( 
      
@@ -13,7 +16,7 @@ const Product = ({product}) => {
                     { productName }
                 </h1>
                 <p className="text-grey-darker text-sm">
-                    { soldAt }
+                    { s_Date }
                 </p>
             </header>
 
@@ -25,10 +28,10 @@ const Product = ({product}) => {
                 Terminal: { numeracioTerminal }
             </p>
 
-            <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <p className="text-sm">
-                        Customer ID: { customerId }
-                    </p>              
+            <footer>
+                <p className="p-4">
+                    Customer ID: { customerId }
+                </p>              
             </footer>
 
         </article>

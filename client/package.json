@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "formik": "^2.2.5",
+    "moment": "^2.29.1",
     "next": "10.0.2",
     "node-sass": "^5.0.0",
     "react": "17.0.1",
