@@ -18,7 +18,7 @@ const Header = () => {
     return ( 
         <header className="py-8 flex flex-col md:flex-row items center justify-between">
             <Link href={"/"}>
-                <h1 className="h1link text-4xl px-4 tracking-tight font-extrabold text-gray-900 text-center">Test Técnic Parlem </h1>
+                <h1 className="h1link text-4xl px-4 tracking-tight font-extrabold text-gray-900 text-center">Test Tècnic Parlem </h1>
             </Link>
             
             <div className="header-buttons mt-4">             
