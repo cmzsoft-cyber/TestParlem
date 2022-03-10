@@ -1,5 +1,7 @@
 # Test Parlem
 
+IMPORTANT: If you cannot connect to the mongodb cluster, please contact with me: carmar85@gmail.com
+
 ## Clonar el repositori a la màquina local 📖
 
 _Entrar desde consola i escriure el següent_
